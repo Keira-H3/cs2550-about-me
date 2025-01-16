@@ -1,5 +1,66 @@
 <html>
     <head>
+        <link href="mystyle.css" rel="stylesheet">
+        <style>
+            h4 {
+                background-color: beige;
+                width: 300px;
+                border: 15px solid green;
+                padding: 50px;
+                margin: 20px;
+            }
+            h1, h2 {
+                color:aquamarine
+            }
+            #p6 {
+                color:forestgreen
+            }
+            .important {
+                font-weight: bold;
+            }
+            section > p:nth-of-type(odd){
+                background-color: yellowgreen;
+            }
+            section h5 {
+                color:seagreen
+            }
+            a:link {
+                color: red;
+                text-decoration: none;
+            }
+            a:visited {
+                color: yellow;
+            }
+            a:hover {
+                color: blue;
+            }
+            a:active {
+                color:aquamarine
+            }
+            section p:first-child::first-letter {
+                text-transform:uppercase;
+                font-weight: 700;
+                font-size:large;
+                line-height: 1;
+                float:left;
+            }
+            section p::first-line {
+                font-weight: 700;
+            }
+            .price::before {
+                content: "$";
+            }
+            ::selection {
+                color: red;
+            }
+            input[type="text"] {
+                background-color: blue;
+            }
+            input[type="button"] {
+                border:0;
+                background-color: red;
+            }
+        </style>
         <title>this is da title</title>
     </head>
     <body>
@@ -7,9 +68,12 @@
         <h1>
             this is<b> bold text </b>heading 1 <i>italic text</i>
         </h1>
-        <h2>
+        <h2 style="color:goldenrod; font: 20px;">
             this is <strong>strong text</strong> heading 2 <em>emphasis text</em>
         </h2>
+        <h4>
+            header 4 text
+        </h4>
         <hr>
         <p>
             <font color="red">red text</font> first paragraph
@@ -17,6 +81,39 @@
         <p style="color:rebeccapurple; font-family:courier;">
         This is my first webpage <br> <strong>strong text</strong> <table> element</table> and <ol> element</ol>
         </p>
+        <p id="p6">
+        Testing text lalalala <a href="#">link here</a> here it is
+        </p>
+        <p class="important">
+            bold text from important class
+        </p>
+        <p>
+            First name: <input type="text" size="20" value="sample text"><br>
+            Last name: <input type="text" size="20"
+        </p>
+        <p>
+            &nbsp;
+        </p>
+        <p>
+            <input type="button" value="example button"
+        </p>
+        <img src="images/thorny_devil.jpg" alt="thorny devil">
     </body>
+    <section>
+        <h5>
+            heading in section without selection
+        </h5>
+        <p>
+            more text<span class="price">in section</span>
+        </p>
+        <drv>
+                <p>
+                    drv paragraph
+                </p>
+        </drv>
+        <p>
+            text in section
+        </p>
+    </section>
 
 </html>
