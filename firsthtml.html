@@ -24,17 +24,17 @@
             section h5 {
                 color:seagreen
             }
-            a:link {
+            p a:link {
                 color: red;
                 text-decoration: none;
             }
-            a:visited {
-                color: yellow;
+            p a:visited {
+                color: peru;
             }
-            a:hover {
+            p a:hover {
                 color: blue;
             }
-            a:active {
+            p a:active {
                 color:aquamarine
             }
             section p:first-child::first-letter {
@@ -60,9 +60,40 @@
                 border:0;
                 background-color: red;
             }
+            ul {
+                list-style-type: none;
+                padding:0px;
+                background-color: cadetblue;
+                width:1200px;
+                text-align: center;
+                overflow: hidden;
+                /*border: 1px solid black;*/
+            }
+            li {
+                float: left;
+            }
+            /*li{
+                border-bottom: 1px solid black;
+            }*/
+            li a {
+                color:black;
+                text-decoration: none;
+                padding: 8px 16px;
+                display: block;
+                
+            }
+            li a:hover {
+                color:cornflowerblue;
+                background-color: darkgray;
+            }
         </style>
         <title>this is da title</title>
     </head>
+    <ul>
+        <li><a href="#">thingy</a></li>
+        <li><a href="#">thingy 2</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
     <body>
         <h1>new title</h1>
         <h1>
