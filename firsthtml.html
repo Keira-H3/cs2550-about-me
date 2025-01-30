@@ -90,14 +90,14 @@
                 height: 100px;
                 margin-left: -50px;
             }
-            div.wrap {
+            .colors div.wrap {
                 overflow: hidden;
                 border-radius: 50%;
                 border-style: solid;
                 border-width: 3px;
                 border-color: magenta;
             }
-            div {
+            .colors div {
                 width:100px;
                 height:100px;
                 text-align: center;
@@ -197,12 +197,38 @@
             text in section
         </p>
     </section>
-    <p>content</p>
-    <div id="orange">orange</div>
-    <div id="blue">blue</div>
-    <div id="green">green</div>
-    <div id="purple">purple</div>
-    <p>content</p>
-    <p>Content</p>
+    <section class="colors">
+        <p>content</p>
+        <div id="orange">orange</div>
+        <div id="blue">blue</div>
+        <div id="green">green</div>
+        <div id="purple">purple</div>
+        <p>content</p>
+        <p>Content</p>
+    </section>
+
+    <style>
+        .grid-container {
+            background-color: cornflowerblue;
+            display: grid;
+            grid-template-columns: 50px auto 100px;
+            grid-gap: 100px;
+        }
+        .grid-container > div {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+
+    <h1>Grid exercise</h1>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
 
 </html>
