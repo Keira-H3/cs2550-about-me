@@ -1,6 +1,24 @@
+body {
+    background-image: linear-gradient(black, slategray);
+    color: whitesmoke;
+    margin: 15px;
+}
 table, th, td {
     border: 1px solid black;
+    color: black;
   }
+table {
+    table-layout: fixed;
+    width: 610px;
+    border: 5px solid gold;
+}
+th {
+    background-color: black;
+    color: lightgrey;
+}
+td {
+    text-align: center;
+}
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -21,6 +39,10 @@ body {
 }
 haiku {
     text-align: center;
+    font-size: 30px;
+}
+a {
+    color: aquamarine;
 }
 a:link {
     text-decoration: none;
@@ -29,6 +51,22 @@ a:hover {
     text-decoration: underline;
 }
 img {
-    float:left;
-    border-right:60px solid transparent
+    float:right;
+    border-right:60px solid transparent;
+    border: 40px solid gold;
+}
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 30pt;
+    text-decoration: underline;
+    background-image: radial-gradient(goldenrod, yellow);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    top: 5px;
+}
+h2 {
+    margin-top: 12%;
+    margin-bottom: 5%;
+    border-bottom: 3px solid aquamarine;
 }
