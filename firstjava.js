@@ -14,3 +14,26 @@ function funcname(a, b, c) {
 }
 
 console.log(funcname(1,2,3));
+let numcomp = function(a,b) {
+    return a-b;
+}
+let lencomp = function(a,b) {
+    return a.length - b.length;
+}
+//a.sort(numcomp);
+a.sort(function(a,b) {
+    return a-b;
+})
+console.log(a)
+let book = {}
+book = {
+    title: "the title",
+    publish: 2011,
+    keywords: "keywordss",
+    name: "name",
+    get name() {
+        return this.book.name;
+    }
+};
+console.log(book);
+console.log(book.name)
