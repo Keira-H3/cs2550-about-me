@@ -304,4 +304,37 @@
     </div>
     <link href = "firstjava.js" rel = "script">
 
+    <meta name="viewport" content="width=device-width, initial=scale=1.0">
+    <img scr="images/thorny_devil.jpg" srcset="images/2.png 2x, images/3.png 3x">
+
+    <picture>
+        <source media="(min-width: 500px)" srcset="images/wide.png">
+        <img src="images/thorny_devil.jpg">
+    </picture>
+
+    <script>
+        "use strct"
+        let livesremaining = 3;
+
+        if(livesremaining > 0) {
+            livesremaining = 1;
+        }
+        console.log(livesremaining);
+
+
+        let img = document.querySelector("img");
+        let imgs = document.querySelectorAll("img");
+        let p = document.querySelector("p");
+
+        console.log(img);
+        console.log(imgs);
+
+        img.src="images/thorny_devil.jpg";
+        p.style ="color:red";
+        console.log(p.textContent);
+        console.log(p.innerHTML);
+        console.log(p.innerText);
+
+    </script>
+
 </html>
