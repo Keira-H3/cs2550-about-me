@@ -1,0 +1,106 @@
+.title {
+    background-image:linear-gradient(black,rgb(29, 97, 63),rgb(0, 163, 131));
+    display: flex;
+    height: 100px;
+    width: 700px;
+    font-size: 70px;
+    color: rgb(255, 183, 14);
+}
+menu {
+    display: flex;
+    background-color:rgb(73, 0, 0);
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    justify-content: baseline;
+}
+menu > div {
+    flex-basis: 200px;
+    padding-top: 12px;
+}
+.title > p {
+    font-size: 30px;
+}
+div.heading {
+    font-size: 30px;
+    color: black;
+}
+button {
+    border: 0;
+    background-color:rgb(73, 0, 0);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+    display: block;
+    background-color:rgb(255, 183, 14);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 500px;
+    color: black;
+    border-radius: 10px;
+}
+#fullart {
+    height: 700px;
+    float: right;
+}
+#gauge {
+    width: 230px;
+    display: block;
+    margin: auto;
+}
+#changing {
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+#overdrive1 {
+    display: block;
+    width: 500px;
+    margin: auto;
+}
+#overdrive1a {
+    display: block;
+    width: 400px;
+    margin: auto;
+}
+.imgcap {
+    display: block;
+    margin: auto;
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+}
+body {
+    background-color: rgb(45, 45, 45);
+}
+div.unmech {
+    display: none;
+}
+div.ovdr {
+    display: none;
+}
+* {
+    color: rgb(196, 196, 196);
+}
+iframe {
+    width: 460px;
+    height: 260;
+}
+/*@media (min-width: 400px) {
+    menu {
+        height: 120px;
+        flex-basis: 400px;
+        justify-content: center;
+    }
+    button {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 40px;
+    }
+    p {
+        text-align: center;
+    }
+}*/

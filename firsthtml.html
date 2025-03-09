@@ -175,7 +175,7 @@
             &nbsp;
         </p>
         <p>
-            <input type="button" value="example button"
+            <input type="button" value="example button">
         </p>
         <div class="wrap">
         <img src="images/thorny_devil.jpg" alt="thorny devil">
@@ -323,17 +323,36 @@
 
 
         let img = document.querySelector("img");
-        let imgs = document.querySelectorAll("img");
+        //let imgs = document.querySelectorAll("img");
         let p = document.querySelector("p");
+        let l = document.getElementsByTagName("li");
+        //let q = document.querySelector("#idname");
+        let q = document.getElementById("idname")
 
         console.log(img);
         console.log(imgs);
+        //console.log(l[0].textContent);
+        //console.log(l[0].firstChild);
+        //console.log(l[0].firstChild.nodeValue);
+        //console.log(l[0].firstChild.firstChild.nodeValue);
+        
+        //console.log(q.childNodes) returns all nodes including text nodes(usually whitespace)
+        //console.log(q.children)   returns all nodes excluding text nodes(usually whitespace)
 
         img.src="images/thorny_devil.jpg";
         p.style ="color:red";
         console.log(p.textContent);
         console.log(p.innerHTML);
         console.log(p.innerText);
+
+        let newli = document.createElement("li");
+        let newtxt = document.createTextNode("New item");
+        newli.appendChild(newtxt);
+        l.appendChild(newli);
+        l.insertBefore(newli, c.children[1]);
+
+        let clonedNode = l.children[2].cloneNode(true);
+        l.appendChild(clonedNode);
 
     </script>
 

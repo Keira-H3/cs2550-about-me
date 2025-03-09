@@ -1,0 +1,75 @@
+<html>
+    <link href="project3.css" rel="stylesheet">
+    <title>Project 3</title>
+    <head>
+        <div class="title">A.B.A.
+            <p><em>Lovingly latched on hormunculus</em></p>
+        </div>
+        <menu>
+            <div><button onclick="CharacterOverview()">Character Overview</button></div>
+            <div><button onclick="UniqueMechanic()">Unique Mechanic</button></div>
+            <div><button onclick="Overdrives()">Overdrives</button></div>
+        </menu>
+    </head>
+    <body>
+    <div class="charover">
+        <h2 class="heading">Character Overview</h2>
+        <img src="aba.webp" alt="character art" id="fullart">
+        <p>A.B.A. is what's commomly refered to as a "feast or famine" character. This essentially means that they're either really good or really bad. For A.B.A. this means the difference between her Normal Mode and her Jealous Rage, or Moroha Mode.
+            <br> This gives A.B.A. a very unique playstyle as your goal is not only to deal damage, but also manage your gauge to stay in Jealous Rage for as long as possible.
+            Thankfully, she has a variety of differernt moves that help her in accomplishing that.
+        </p>
+        <iframe src="https://www.youtube.com/embed/ZjqfSOnuyyM?si=JvPWP0gsr8lBjqje" title="YouTube video player">player</iframe>
+    </div>
+    <div class="unmech">   
+        <h2 class="heading">Unique Mechanic</h2>
+        <p>A.B.A.'s unique mechanic is something called jealous rage. An incredibly powerful stance regulated by something called the jealously gauge.</p>
+        <img src="jealousy_gauge.png" alt="jealousy gauge" id="gauge">
+        <p class="imgcap">Jealousy Gauge</p>
+        <p>A.B.A. starts a match with the jealousy gauge halfway full. The gauge is then filled by hitting moves in which she uses Paracelsus (yes, the key has a name), those moves mainly being her Slash (S) and Heavy Slash (HS) moves.
+            <br>When the gauge is above 25%, A.B.A can use either <em>Changing and Swaying</em> (62314P), <em>Bonding and Dissolving</em> (214H), or one of her Overdrives called <em>The Law is Key, Key is King</em> (632146H).</p>
+        <img src="CandS.png" alt="Changing and Swaying" id="changing">
+        <p class="imgcap">Changing and Swaying</p>
+        <p>Once in Jealous Rage, a majority of A.B.A.'s moves change, along with increased run speed, a better backdash and higher damage.
+            But the meter will continuously drain while A.B.A is in this mode, eventually forcing her out of it when the gauge reaches 0.
+            Before this happens, the player can use any of the previously mentioned moves to switch back to Normal Mode and recover a portion of the gauge, 
+            the exception being <em>The Law is Key, Key is King</em> (6321246H) which instead has a new cache-out mechanic in which the super deals more damage for each extra 25% left in the 
+            gauge when the move is used, emptying the gauge afterward in exchange.
+        </p>
+        <img src="overdrive1.png" alt="Overdrive" id="overdrive1">
+        <p class="imgcap">The Law is Key, Key is King (Jealous Rage)</p>
+    </div>
+    <div class="ovdr">
+        <h2 class="heading">Overdrives</h2>
+        <p>Like most characters, A.B.A. has two different overdrives, also know as supers.</p>
+        <h4>The Law is Key, Key is King</h4>
+        <p><em>The Law is Key, Key is King</em> (632146H) is the first of A.B.A.'s overdrives, a powerful two hitting swing that will grant 25% to the gauge and put A.B.A. into her Jealous Rage mode on hit.
+        Though it's an invincible reversal it is very unsafe on block.
+        </p>
+        <img id="overdrive1a" src="overdrive1a.png" alt="Overdrive 1">
+        <p class="imgcap">Second hit of Overdrive</p>
+    </div>
+    </body>
+    <script>
+        var char = document.querySelector(".charover");
+        var unme = document.querySelector(".unmech");
+        var ovdr = document.querySelector(".ovdr");
+        function CharacterOverview() {
+
+            console.log(char);
+            char.style = 'display:block';
+            unme.style = 'display:none';
+            ovdr.style = 'display:none';
+        }
+        function UniqueMechanic() {
+            char.style = "display:none";
+            unme.style = "display:block";
+            ovdr.style = "display:none";
+        }
+        function Overdrives() {
+            char.style = "display:none";
+            unme.style = "display:none";
+            ovdr.style = "display:block";
+        }
+    </script>
+</html>
