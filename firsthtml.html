@@ -356,4 +356,156 @@
 
     </script>
 
+    <label>Player Name:
+        <input type="text" id="playerName">
+    </label>
+    <label>Password:
+        <input type="text" id="playerPwd">
+    </label>
+    <input type="button" value="Click Me" id="clickBtn" onclick="console.log('hello')">
+    <p id="errorMsg" style="color: red;"></p>
+
+    <script>
+
+        let error = document.getElementById("errorMsg");
+        let name = document.getElementById("playerName");
+        let clickBtn = document.getElementById("clickBtn");
+
+        console.log(name.value);
+
+        function clickBtnClick() {
+            if (name.value == "") {
+                error.textContent = "Missing Player's Name";
+            }
+            else {
+                error.textContent = "";
+            }
+        }
+
+        clickBtn.onclick = clickBtnClick;
+        
+        function PrintData(event) {
+            console.log(event.target);
+        }
+        clickBtn.onclick = PrintData;
+        clickBtn.addEventListener("click", clickBtnClick);
+        clickBtn.addEventListener("click", PrintData);
+        //name.addEventListener("change", clickBtnClick)
+
+        name.addEventListener("blur", clickBtnClick);
+
+    </script>
+
+
+
+
+
+    <div id="container" style="width: 300px; background-color: pink;">
+        <button id="click_me">Click Me</button>
+    </div>
+
+    <pre id="output"></pre>
+
+    <script>
+        let container = document.getElementById("container");
+        let click_me = document.getElementById("click_me");
+        let output = document.getElementById("output");
+
+        function handleClick(e) {
+            output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`
+            e.stopPropagation();
+        }
+        container.addEventListener("click", handleClick, false);
+        click_me.addEventListener("click", handleClick, false);
+
+        //elem.addEventListener(type, listener, useCapture);
+
+    </script>
+
+    <style>
+        #popup {
+            display: none;
+            border: solid black 1px;
+            width: 300px;
+            background-color: red;
+            text-align: center;
+            margin: auto;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            right: 0px;
+        }
+    </style>
+
+    <div id="popup">
+        <h1>Free ipad</h1>
+        <p id="close">Close</p>
+    </div>
+
+    <script>
+        let timerid = setTimeout(showTimeup, 3000);
+        function showTimeup() {
+            let popup = document.getElementById("popup");
+            ad.style.display = "block";
+        }
+
+        let close = document.getElementById("close");
+        close.addEventListener("click", closebutton);
+
+        function closebutton() {
+            let ad = document.getElementById("popup");
+            ad.style.display = "none";
+            //makes ad show up again
+            clearTimeout(timerid);
+            let timerid = setTimeout(showTimeup, 3000);
+        }
+        let ad_x = 5;
+        let ad_y = 2;
+
+        timerID = setInterval(animation, 50);
+
+        function animation() {
+            ad_x = ad_x + vel_x;
+            ad_y = ad_y + vel_y;
+            ad.style.top = ad_y;
+            ad.style.bottom = ad_x;
+
+            if (counter > 100) {
+                clearInterval(timerID);
+            }
+        }
+        let vel_x = 5;
+        let vel_y = 2;
+        //ad pos += velocity
+
+    </script>
+
+
+    <label>Player Name:
+        <input type="text" id="username">
+    </label>
+    <label>Difficulty:
+        <input type="number" min="1" max="3" id="difficulty" value="1">
+    </label>
+    <input type="button" value="Save" id="savebtn">
+
+    <script>
+
+        let username = document.getElementById("username");
+        let difficulty = document.getElementById("difficulty");
+        let savebtn = document.getElementById("savebtn");
+
+        if (localStorage.getItem("playername")) {
+            username.value = localStorage.getItem("username");
+            difficulty.value = localStorage.getItem("playerlevel");
+        } 
+
+        savebtn.addEventListener("click", save);
+        function save() {
+            localStorage.setItem("playername", username.value);
+            localStorage.setItem("playerlevel", difficulty.value);
+        }
+
+    </script>
+
 </html>
