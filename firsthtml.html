@@ -482,7 +482,7 @@
 
 
     <label>Player Name:
-        <input type="text" id="username">
+        <input type="text" id="plrname">
     </label>
     <label>Difficulty:
         <input type="number" min="1" max="3" id="difficulty" value="1">
@@ -491,7 +491,7 @@
 
     <script>
 
-        let username = document.getElementById("username");
+        let username = document.getElementById("plrname");
         let difficulty = document.getElementById("difficulty");
         let savebtn = document.getElementById("savebtn");
 
@@ -507,5 +507,75 @@
         }
 
     </script>
+
+    <div id="container">
+        <div id="quote">quote</div>
+    </div>
+
+    <script>
+
+        function loadquote() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("quote").innerHTML = this.responseText
+            }
+            xhttp.open("GET", "text.txt");
+            xhttp.send();
+        }
+
+    </script>
+
+    <form action="https://httpbin.org/anything" method="POST">
+        <p><label id="idtxt">Username:</label>
+            <input type="text" name="id">
+        </p>
+        <p>Password:
+            <input type="password" id="idtxt" name="pwd" maxlength="5" size="10">
+        </p>
+        <p>
+            <input type="checkbox" name="rname">
+            Remember user id
+        </p>
+        <fieldset>
+            <legend>Select server:</legend>
+            <input type="radio" name="server" value="US">US
+            <input type="radio" name="server" value="EU">EU
+            <input type="radio" name="server" value="TW">TW
+        </fieldset>
+
+        <select name="server2">
+            <option value="US">US</option>
+            <option value="EU">EU</option>
+            <option value="TW">TW</option>
+        </select>
+        <p>
+        <input type="submit" value="yes">
+        <input type="reset">
+        </p>
+        <p>
+            <button type="submit">Click Me</button>
+            <button type="reset">Click Me</button>
+        </p>
+    </form>
+
+    <form action="https://httpbin.org/anything" method="GET">
+        <h1>Weather Search</h1>
+        <p>Please enter the following information:</p>
+        <div>
+            <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip">
+        </div>
+        <div>
+            <label for="sys">Unit System:</label>
+                <select id="sys" name="units">
+                    <option value="Imperial">Imperial</option>
+                    <option value="Metric">Metric</option>
+                </select>
+        </div>
+        <div>
+            <input type="hidden" name="appid" value="3094738947">
+            <input type="submit">
+        </div>
+    </form>
 
 </html>
