@@ -577,5 +577,23 @@
             <input type="submit">
         </div>
     </form>
+    <script>
+        let zip = document.getElementById("zip");
+        let form = document.querySelector("form");
+        function validzip () {
+            let re = /^\d{5}$/;
+            return re.test(zip.value.trim());
+        }
+        function checkform () {
+            if (zip.value == "") {
+                event.preventDefault();
+            }
+            if (!validzip()) {
+                event.preventDefault();
+            }
+        }
+        form.addEventListener("submit", checkform);
+
+    </script>
 
 </html>
